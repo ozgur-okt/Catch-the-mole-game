@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(208,255,208,1) 0%, rgba(85,205,72,1) 100%);
+
+  }
+  .container {
+    font-family: sans-serif;
+    width: 50%;
+    margin: 3rem auto;
+    text-align: center;
+    
+  }
+  header h1 {
+    font-size: 30px;
+    font-weight: "bold";
+  }
+  header h3 {
+    margin: 3rem 0;
+    font-weight: "bold";
+    
+    
+  }
+  header button {
+    cursor: pointer;
+    border: "solid" ;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    background: #68a68b;
+    font-weight : bold;
+    width: 150px; 
+    color: #ebedec;
+  }
+  header button:hover {
+    background-color: #b3e3ce;
+    color: #6b6b6b;
+  }
+  .game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 0rem; */
+    cursor: grab;
+  }
+  .soil {
+    position: relative;
+    margin: 2rem 0.5rem;
+    margin-top: 4rem;
+    height: 6rem;
+    width: 30%;
+    background-size: cover;
+  }
+  .soil::after {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("./img/soil.png") center no-repeat;
+    background-size: cover;
+  }
+  .mole {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    background: url("./img/mole.png") center no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease;
+  }
+  .mole.chosen {
+    top: -3rem;
+  }
+  #time {
+    position: absolute;
+    width: 11%;
+    right: 5%;
+    top: 80%;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background-color: #a5cab8;
+    
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .container {
+      width: 70%;
+    }
+    .soil {
+      position: relative;
+      width: 30%;
+    }
+    #time {
+      right: 5%;
+      top: 20%;
+      border-bottom: 1px solid black;
+      font-size: 1.2rem;
+    }
+  }
