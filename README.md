@@ -6,7 +6,7 @@ you score goes up +1.
 ### Installation and Starting the Server
 
 ```sh
-git clone https://github.com/ozgur-okt/JavaScript-Catch-the-mole-game
+git clone https://github.com/ozgur-okt/game-catch-the-mole
 ```
 After cloning, you can open html file or run it in VS Code to start the server.
 
