@@ -8,8 +8,17 @@ let timeup= false;
 let score=0;
 let time=15;
 
+startButton.addEventListener("click", active);
 startButton.addEventListener("click",startGame);
 moles.forEach((mole)=> mole.addEventListener("click", catchit));
+
+
+function active() {
+    startButton.disabled = true;
+    setTimeout(function() {
+        startButton.disabled = false;
+    }, 15000);
+}
 
 function randommole(){
     const turnofmole=Math.floor(Math.random()*moles.length);
